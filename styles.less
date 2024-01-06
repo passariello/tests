@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+// Copyright (c) 2024 Dario Passariello
+
+:root{
+	--aside: 300px;
+	--w1: 15px;
+	--w2: 33px;
+	--h1: 18px;
+}
+
+*{
+	font-family: 'Lato', sans-serif;
+	&::backdrop {
+		background-color: rgba(255,255,255,0);
+	}
+}
+
+html,
+body{
+	margin:0;
+	padding:0;
+	font-size:1em;  
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	
+	&:before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-image: url('/images/bg.jpg');
+	  background-size: cover;
+	  filter: blur(4px);
+	  z-index: 0
+	}
+	
+	aside{
+		padding:15px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		width:var(--aside);
+		border-right:1px solid #bbb;
+		overflow:auto;
+		background:#eee;
+		
+		hr{
+			width:150px;
+		}
+		
+		.table{			
+			.title{
+				display:flex;
+				padding-left: var(--w1);
+				display:flex;
+				span{		
+					color: cornflowerblue;				
+					text-align: center;
+					font-size:.65em;
+					width: var(--w2);
+				}
+			}
+			.row{
+				display:flex;
+				> span{
+					color: cornflowerblue;
+					font-size:.65em;
+					width: var(--w1);
+					text-align: right;
+					padding-right:3px;
+				}
+				input{
+					width: var(--w2);
+					height: var(--h1);
+					padding:1px;
+					text-align:center;
+					font-size:.65em;
+					border: 1px solid #ddd;
+				}
+			}
+		}
+	}
+	
+	main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position:absolute;
+		top:0;
+		left:var(--aside);
+		right:0;
+		bottom:0;
+		overflow:auto;
+		
+		button{
+			font-size:1em;
+			margin:3px;
+			padding:8px;
+			width:390px;
+			border-radius:10px;
+			border:1px solid #AAA;
+			color:#AAA;
+			text-shadow: black 0 -1px, white 0 1px;
+			
+			&:hover{
+				background: #CCC;
+				cursor:pointer;
+			}
+		}
+
+		hr{
+			background:gray;
+			height:1px;
+			width:350px;
+			margin:10px;
+		}
+	}
+	
+	footer{
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
+		font-size: .8em;
+	}
+
+}
+
