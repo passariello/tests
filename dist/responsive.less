@@ -1,0 +1,46 @@
+@media screen and (max-width: 699px) {
+
+	:root{
+		--w2:60px !important;
+	}
+	
+	html{
+		overflow:auto !important;		
+	}
+	
+	body{
+		display:flex !important;
+		position:relative !important;
+		flex-direction: column-reverse;
+		align-items: center;
+		overflow:auto !important;
+		padding:20px 10px !important;
+		
+		&:before{
+			all:unset !important;
+		}
+		
+		#fs{
+			display:none;
+		}
+		
+		main,
+		aside,
+		section,
+			footer{
+				all:unset !important;
+				width:100%;
+			}
+
+		main{
+		display: flex !important;
+		flex-direction: column !important;
+			input{
+				width:80% !important;
+			}
+		}
+		
+	}  
+
+  
+}

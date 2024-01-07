@@ -9,11 +9,14 @@
 	<link rel="stylesheet/less" type="text/css" href="bootstrap.less" />
 	<link rel="stylesheet/less" type="text/css" href="layerpro.less" />
 	<link rel="stylesheet/less" type="text/css" href="styles.less" />
+	<link rel="stylesheet/less" type="text/css" href="responsive.less" />
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 	<title>Example by Dario Passariello</title>
+	
 </head>
 
 	<body>
@@ -32,17 +35,12 @@
 	</aside>
 
 	<main>
-		<!-- Custom NPM -->
-		<script src="https://unpkg.com/dphelper@latest/index.js"></script>
-		<script src="https://unpkg.com/layerpro@latest/index.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/less@4.2.0" ></script>
-		<script src="javascript.js"></script>
 
 		<br/>
 		<h1><i class="fa-solid fa-person-through-window"></i> State like an Hero!</h1>
 		<p>Test State and popup!</p>
 
-		<button type="button" onclick="goFullScreen('body')" style="position:absolute;top:10px;right:10px; width:unset"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+		<button id="fs" type="button" onclick="goFullScreen('body')" style="position:absolute;top:10px;right:10px; width:unset"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
 
 		<button type="button" onclick="openLayerPrompt()">Are you <span id="yourName"></span>?</button>
 
@@ -66,5 +64,11 @@
 
 	<footer>Copyright &copy; <span class="year">2024</span> - Dario Passariello</footer>
 
+	<!-- Custom NPM -->
+	<script src="https://unpkg.com/dphelper@latest/index.js"></script>
+	<script src="https://unpkg.com/layerpro@latest/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/less@4.2.0" ></script>
+	<script src="javascript.js"></script>
+	
 	</body>
 </html>
