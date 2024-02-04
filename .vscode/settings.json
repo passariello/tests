@@ -6,6 +6,11 @@
   "eslint.workingDirectories": [
     "./src"
   ],
+  "explorer.compactFolders": false,
+  "problems.decorations.enabled": true,
+  "html.validate.styles": true,
+  "html.validate.scripts": true,
+  "html.suggest.html5": true,
   "editor.hover.enabled": true,
   "editor.hover.delay": 2000,
   "editor.quickSuggestions": {
@@ -29,15 +34,12 @@
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.bracketPairColorization.enabled": false,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "javascript.format.semicolons": "remove",
   "typescript.format.semicolons": "remove",
   "typescript.referencesCodeLens.enabled": true,
   "typescript.suggestionActions.enabled": false,
   "javascript.suggestionActions.enabled": false,
-  "explorer.compactFolders": false,
   "workbench.editor.limit.excludeDirty": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,

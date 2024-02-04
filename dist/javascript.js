@@ -111,8 +111,8 @@ dphelper.dispatch.listen("myEvent", event => {
 const openFullLayer = () => {
   var randNum = Math.floor(Math.random() * 9999) + 1
   layerpro.popup.open({
-	// id: this permit multiple popup (if you put fix number you can open one only with same id)
-    id: 'IamAnExample_' + randNum, 
+    // id: this permit multiple popup (if you put fix number you can open one only with same id)
+    id: 'IamAnExample_' + randNum,
     body: "IamAnExample and you can put a component also!",
     name: "I am An Example popup id " + randNum,
     icon: "&#9998;",
@@ -170,3 +170,270 @@ const dform = () => {
   dphelper.form.table(size = [7, 24], "fdata", "aside>div")
   return
 }
+
+menupro.start({
+  "author": "Dario Passariello",
+  "charset": "UTF-8",
+  "title": "navmenu",
+  "short": "navmenu",
+  "keywords": "",
+  "nav": [
+    {
+      "name": "file",
+      "title": "",
+      "target": "",
+      "link": "",
+      "onclick": "",
+      "icon": "",
+      "lang": {
+        "en": "file"
+      },
+      "sub": [
+        {
+          "name": "test_file_1_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "<img src='assets/icons/list-alt.svg' />",
+          "lang": {
+            "en": "test"
+          },
+          "sub": []
+        },
+        {
+          "name": "test_file_2_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "<img src='assets/icons/tasks.svg' />",
+          "lang": {
+            "en": "test"
+          },
+          "sub": []
+        },
+        {
+          "name": ""
+        },
+        {
+          "name": "test_file_3_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "<img src='assets/icons/thumbtack.svg' />",
+          "lang": {
+            "en": "test"
+          },
+          "sub": []
+        },
+        {
+          "name": "test_file_4_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "<img src='assets/icons/users.svg' />",
+          "lang": {
+            "en": "test"
+          },
+          "sub": [
+            {
+              "name": "test_file_2_1",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": [
+                {
+                  "name": "test_file_3_1",
+                  "title": "",
+                  "target": "",
+                  "link": "",
+                  "onclick": "",
+                  "icon": "<img src='assets/icons/users-cog.svg' />",
+                  "lang": {
+                    "en": "test"
+                  },
+                  "sub": []
+                },
+                {
+                  "name": ""
+                },
+                {
+                  "name": "test_file_3_2",
+                  "title": "",
+                  "target": "",
+                  "link": "",
+                  "onclick": "",
+                  "icon": "<img src='assets/icons/wifi.svg' />",
+                  "lang": {
+                    "en": "test"
+                  },
+                  "sub": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "test_file_5_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "<img src='assets/icons/wrench.svg' />",
+          "lang": {
+            "en": "test"
+          },
+          "sub": [
+            {
+              "name": "test_file_2_1",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": [
+                {
+                  "name": "test_file_3_1",
+                  "title": "",
+                  "target": "",
+                  "link": "",
+                  "onclick": "",
+                  "icon": "",
+                  "lang": {
+                    "en": "test"
+                  },
+                  "sub": []
+                },
+                {
+                  "name": "test_file_3_2",
+                  "title": "",
+                  "target": "",
+                  "link": "",
+                  "onclick": "",
+                  "icon": "",
+                  "lang": {
+                    "en": "test"
+                  },
+                  "sub": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "edit",
+      "title": "",
+      "target": "",
+      "link": "",
+      "onclick": "",
+      "icon": "",
+      "lang": {
+        "en": "edit"
+      },
+      "sub": [
+        {
+          "name": "test_edit_1",
+          "title": "",
+          "target": "",
+          "link": "",
+          "onclick": "",
+          "icon": "",
+          "lang": {
+            "en": "test"
+          },
+          "sub": [
+            {
+              "name": "test_edit_1_1",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": []
+            },
+            {
+              "name": "test_edit_1_2",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": []
+            },
+            {
+              "name": ""
+            },
+            {
+              "name": "test_edit_1_3",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": [
+                {
+                  "name": "test_edit_2_1",
+                  "title": "",
+                  "target": "",
+                  "link": "",
+                  "onclick": "",
+                  "icon": "",
+                  "lang": {
+                    "en": "test"
+                  },
+                  "sub": []
+                }
+              ]
+            },
+            {
+              "name": "test_edit_1_4",
+              "title": "",
+              "target": "",
+              "link": "",
+              "onclick": "",
+              "icon": "",
+              "lang": {
+                "en": "test"
+              },
+              "sub": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "selection",
+      "title": "",
+      "target": "",
+      "link": "",
+      "onclick": "",
+      "icon": "",
+      "lang": {
+        "en": "selection"
+      },
+      "sub": []
+    }
+  ]
+})
