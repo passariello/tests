@@ -1,74 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" style="display:none;">
+
+<html
+      lang="en"
+    dir="ltr"
+      prefix="og: http://ogp.me/ns#"
+      itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="description" content="Example by Dario Passariello, Copyright (c) 2024"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
 
-	<link rel="stylesheet/less" type="text/css" href="bootstrap.less" />
-	<link rel="stylesheet/less" type="text/css" href="layerpro.less" />
-	<link rel="stylesheet/less" type="text/css" href="styles.less" />
-	<link rel="stylesheet/less" type="text/css" href="responsive.less" />
+  <meta name="description" content="Example by Dario Passariello, Copyright (c) 2024"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="index.html" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="google" content="nopagereadaloud" />
+  <meta name="referrer" content="no-referrer" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="canonical" href="https://a51.dev/tests/" />
 
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-	<title>Example by Dario Passariello</title>
-	
+  <link rel="dns-prefetch" href="https://unpkg.com" nonce />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" nonce />
+
+  <link rel="stylesheet/less" type="text/css" href="bootstrap.less" />
+  <link rel="stylesheet/less" type="text/css" href="layerpro.less" />
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <link rel="stylesheet/less" type="text/css" href="responsive.less" />
+  <link rel="stylesheet/less" type="text/css" href="menupro.less" />
+
+  <link rel="preload stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+
+  <link rel="preload stylesheet preconnect" href="bootstrap.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+  <link rel="preload stylesheet preconnect" href="layerpro.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+  <link rel="preload stylesheet preconnect" href="styles.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+  <link rel="preload stylesheet preconnect" href="responsive.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+  <link rel="preload stylesheet preconnect" href="menupro.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Example by Dario Passariello</title>
+
 </head>
 
-	<body>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRG62GDLLK"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-	<aside>
-	<br/>
-	<h2><i class="fa-regular fa-calendar-days"></i> time sheet</h2>
-	<small>values are random numbers 7x24</small>
-	<hr/>
-	<div></div>
-	<hr/>
-		<section style="display:flex">
-			<button type="button" onclick="dform()">refresh</button>
-			<button type="button" onclick="serialize()">Serialize for API</button>
-		</section>
-	</aside>
+	  gtag('config', 'G-YRG62GDLLK');
+	</script>
 
-	<main>
+  <body>
 
-		<br/>
-		<h1><i class="fa-solid fa-person-through-window"></i> State like an Hero!</h1>
-		<p>Test State and popup!</p>
+    <header>
+      <nav><ul class="menupro"></ul></nav>
+    </header>
 
-		<button id="fs" type="button" onclick="goFullScreen('body')" style="position:absolute;top:10px;right:10px; width:unset"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+  <aside>
+  <br/>
+  <h2><i class="fa-regular fa-calendar-days"></i> time sheet</h2>
+  <small>values are random numbers 7x24</small>
+  <hr/>
+  <div></div>
+  <hr/>
 
-		<button type="button" onclick="openLayerPrompt()">Are you <span id="yourName"></span>?</button>
+    <section>
+      <button type="button" onclick="dform()">refresh</button>
+      <button type="button" onclick="serialize()">Serialize for API</button>
+    </section>
+  </aside>
 
-		<hr/>
+  <main>
 
+    <br/>
+    <h1><i class="fa-solid fa-person-through-window"></i> State like an Hero!</h1>
+    <p>Test State and popup! <a href="https://github.com/passariello/tests">( GITHUB )</a></p>
 
-		<button type="button" onclick="openLayerAlert()">Alert a state</button>
-		<button type="button" onclick="openLayerMessage()">Test Message</button>
-		<button type="button" onclick="openLayerConfirm()">Test Confirm</button>
-		<button type="button" onclick="state.custom.fun000()">Test Function from State</button>
-		<br/>
-		<button type="button" onclick="openFullLayer()">Open a full LayerPro</button>
-		<br/>
-		<button type="button" onclick="state.custom.fun001()">Test JQuery (from magic) Background Color (gray)</button>
-		<button type="button" onclick="state.custom.fun002()">Toggle Background Color (blue|red)</button>
+    <span id="fs" title="Go Full Screen" onclick="goFullScreen('body')">
+      <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+    </span>
 
-		<hr/>
+    <button type="button" onclick="openLayerPrompt()">Are you <span id="yourName"></span>?</button>
 
-		<button type="button" onclick="afterState()">Generate Dispatch Trigger after State Set</button>
-	</main>
+    <hr/>
 
-	<footer>Copyright &copy; <span class="year">2024</span> - Dario Passariello</footer>
+    <button type="button" onclick="openLayerAlert()">Alert a state</button>
+    <button type="button" onclick="openLayerMessage()">Test Message</button>
+    <button type="button" onclick="openLayerConfirm()">Test Confirm</button>
+    <button type="button" onclick="state.custom.fun000()">Test Function from State</button>
+    <br/>
+    <button type="button" onclick="openFullLayer()">Open a full LayerPro</button>
+    <br/>
+    <button type="button" onclick="state.custom.fun001()">Test JQuery (from magic) Background Color (gray)</button>
+    <button type="button" onclick="state.custom.fun002()">Toggle Background Color (blue|red)</button>
 
-	<!-- Custom NPM -->
-	<script src="https://unpkg.com/dphelper@latest/index.js"></script>
-	<script src="https://unpkg.com/layerpro@latest/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/less@4.2.0" ></script>
-	<script src="javascript.js"></script>
-	
-	</body>
+    <hr/>
+
+    <button type="button" onclick="afterState()">Generate Dispatch Trigger after State Set</button>
+  </main>
+
+  <footer>Copyright &copy; <span class="year">2024</span> - Dario Passariello</footer>
+
+  <!-- Custom NPM -->
+  <script src="https://unpkg.com/dphelper@latest/index.js"></script>
+  <script src="https://unpkg.com/layerpro@latest/index.js"></script>
+  <script src="https://unpkg.com/menupro@latest/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/less@4.2.0" ></script>
+  <script src="javascript.js"></script>
+
+  </body>
 </html>
