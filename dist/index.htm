@@ -1,10 +1,7 @@
+
 <!DOCTYPE html>
 
-<html
-      lang="en"
-    dir="ltr"
-      prefix="og: http://ogp.me/ns#"
-      itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
   <meta charset="UTF-8"/>
@@ -22,10 +19,7 @@
 
   <link rel="canonical" href="https://a51.dev/tests/" />
 
-  <link rel="preconnect" href="https://unpkg.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <link rel="dns-prefetch" href="https://unpkg.com" nonce />
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" nonce />
 
   <link rel="stylesheet/less" type="text/css" href="bootstrap.less" />
@@ -36,27 +30,34 @@
 
   <link rel="preload stylesheet preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
 
-  <link rel="preload stylesheet preconnect" href="bootstrap.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
-  <link rel="preload stylesheet preconnect" href="layerpro.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
-  <link rel="preload stylesheet preconnect" href="styles.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
-  <link rel="preload stylesheet preconnect" href="responsive.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
-  <link rel="preload stylesheet preconnect" href="menupro.less" as="style" onload="this.onload=null;this.rel='stylesheet'" nonce>
-
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <title>Example by Dario Passariello</title>
 
 </head>
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRG62GDLLK"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRG62GDLLK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-	  gtag('config', 'G-YRG62GDLLK');
-	</script>
+    gtag('config', 'G-YRG62GDLLK');
+  </script>
+
+  <script>
+    navigation.addEventListener('navigate', () => {
+      setTimeout(() => {
+        let first = $(location).attr('pathname')
+        gtag('event', 'ajax_interaction', {
+          'event_category': 'Engagement',
+          'event_label': 'navigation',
+          'page_path': first
+        })
+      }, 0)
+    });
+  </script>
 
   <body>
 
@@ -107,13 +108,14 @@
     <button type="button" onclick="afterState()">Generate Dispatch Trigger after State Set</button>
   </main>
 
-  <footer>Copyright &copy; <span class="year">2024</span> - Dario Passariello</footer>
+  <footer>Copyright &copy; <span class="year">2025</span> - Dario Passariello</footer>
 
   <!-- Custom NPM -->
-  <script src="https://unpkg.com/dphelper@latest/index.js"></script>
-  <script src="https://unpkg.com/layerpro@latest/index.js"></script>
-  <script src="https://unpkg.com/menupro@latest/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/less@4.2.0" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/dphelper"></script>
+  <script src="https://cdn.jsdelivr.net/npm/layerpro"></script>
+  <script src="https://cdn.jsdelivr.net/npm/menupro"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/less" ></script>
   <script src="javascript.js"></script>
 
   </body>
